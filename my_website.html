@@ -1,0 +1,1188 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ankur Singh | MCA & BCA Computer Science</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Ankur Singh — MCA and BCA Computer Science professional."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #07070a;
+      --bg-soft: #0d0d12;
+      --card: rgba(255, 255, 255, 0.045);
+      --border: rgba(255, 255, 255, 0.10);
+      --text: #f7f7fb;
+      --muted: #a1a1aa;
+      --primary: #8b5cf6;
+      --secondary: #06b6d4;
+      --gradient: linear-gradient(135deg, #8b5cf6, #06b6d4);
+      --radius: 22px;
+      --max-width: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(139, 92, 246, 0.13), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(6, 182, 212, 0.10), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: auto;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(7, 7, 10, 0.72);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: #a78bfa;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #b8b8c2;
+      font-size: 0.92rem;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-btn {
+      padding: 10px 18px;
+      border-radius: 100px;
+      background: white;
+      color: #09090b;
+      font-weight: 600;
+      font-size: 0.88rem;
+      transition: 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255,255,255,0.12);
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.7rem;
+      cursor: pointer;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 90px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      background: rgba(255,255,255,0.035);
+      color: #c4b5fd;
+      font-size: 0.82rem;
+      margin-bottom: 22px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 15px #22c55e;
+    }
+
+    .hero h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(3.4rem, 8vw, 6.6rem);
+      line-height: 0.95;
+      letter-spacing: -5px;
+      margin-bottom: 25px;
+    }
+
+    .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 23px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #08080b;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(255,255,255,0.12);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.09);
+      transform: translateY(-3px);
+    }
+
+    /* Hero Card */
+
+    .profile-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-card {
+      width: min(100%, 390px);
+      min-height: 470px;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.025));
+      border-radius: 30px;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 30px 100px rgba(0,0,0,0.45);
+      transform: rotate(2deg);
+      transition: 0.5s ease;
+    }
+
+    .profile-card:hover {
+      transform: rotate(0deg) translateY(-8px);
+    }
+
+    .profile-card::before {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: #8b5cf6;
+      filter: blur(90px);
+      opacity: 0.25;
+      top: -100px;
+      right: -100px;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Space Grotesk";
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+      border: 5px solid rgba(255,255,255,0.08);
+    }
+
+    .profile-card h3 {
+      font-family: "Space Grotesk";
+      font-size: 2rem;
+      margin-bottom: 6px;
+    }
+
+    .profile-role {
+      color: #a78bfa;
+      margin-bottom: 30px;
+    }
+
+    .profile-info {
+      display: grid;
+      gap: 13px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 13px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.88rem;
+    }
+
+    .info-row span:first-child {
+      color: #777783;
+    }
+
+    /* ================= SECTIONS ================= */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 55px;
+    }
+
+    .section-label {
+      color: #a78bfa;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-family: "Space Grotesk";
+      font-size: clamp(2.2rem, 5vw, 3.7rem);
+      letter-spacing: -2px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 600px;
+      margin-top: 14px;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .glass-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+    }
+
+    .glass-card h3 {
+      font-family: "Space Grotesk";
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+
+    .glass-card p {
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* ================= EDUCATION ================= */
+
+    .education {
+      display: grid;
+      gap: 18px;
+    }
+
+    .education-card {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      gap: 25px;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 25px;
+      transition: 0.3s ease;
+    }
+
+    .education-card:hover {
+      transform: translateX(6px);
+      border-color: rgba(139,92,246,0.4);
+    }
+
+    .edu-icon {
+      width: 65px;
+      height: 65px;
+      border-radius: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(139,92,246,0.12);
+      font-size: 1.6rem;
+    }
+
+    .education-card h3 {
+      font-family: "Space Grotesk";
+      font-size: 1.25rem;
+      margin-bottom: 4px;
+    }
+
+    .education-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .degree {
+      color: #a78bfa;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 7px 12px;
+      border-radius: 100px;
+      background: rgba(139,92,246,0.1);
+      white-space: nowrap;
+    }
+
+    /* ================= SKILLS ================= */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .skill {
+      padding: 22px;
+      border-radius: 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      transition: 0.3s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-6px);
+      border-color: rgba(6,182,212,0.4);
+    }
+
+    .skill-icon {
+      font-size: 1.6rem;
+      margin-bottom: 13px;
+    }
+
+    .skill h4 {
+      font-size: 0.95rem;
+      margin-bottom: 5px;
+    }
+
+    .skill p {
+      color: #777783;
+      font-size: 0.78rem;
+    }
+
+    /* ================= PROJECTS ================= */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project {
+      min-height: 280px;
+      padding: 28px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.4s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+      border-color: rgba(139,92,246,0.4);
+    }
+
+    .project-number {
+      font-size: 0.75rem;
+      color: #71717a;
+      letter-spacing: 2px;
+    }
+
+    .project h3 {
+      font-family: "Space Grotesk";
+      font-size: 1.5rem;
+      margin: 35px 0 10px;
+    }
+
+    .project p {
+      color: var(--muted);
+      font-size: 0.87rem;
+      line-height: 1.7;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      padding: 5px 9px;
+      border-radius: 7px;
+      background: rgba(255,255,255,0.06);
+      color: #bdbdc7;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact-box {
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 65px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(139,92,246,0.16), transparent 50%),
+        var(--card);
+    }
+
+    .contact-box h2 {
+      font-family: "Space Grotesk";
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      letter-spacing: -3px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      max-width: 550px;
+      margin: 0 auto 30px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #666672;
+      font-size: 0.8rem;
+    }
+
+    /* ================= ANIMATION ================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      animation: reveal 0.8s forwards;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 { animation-delay: .15s; }
+    .delay-2 { animation-delay: .3s; }
+    .delay-3 { animation-delay: .45s; }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-wrap {
+        justify-content: flex-start;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-links,
+      .nav-btn {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links.active {
+        display: flex;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 25px;
+        background: rgba(7,7,10,0.97);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        letter-spacing: -3px;
+      }
+
+      .profile-card {
+        min-height: 430px;
+      }
+
+      .education-card {
+        grid-template-columns: 60px 1fr;
+      }
+
+      .degree {
+        grid-column: 2;
+        width: fit-content;
+      }
+
+      .contact-box {
+        padding: 40px 22px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      section {
+        padding: 80px 0;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .hero-description {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header>
+    <div class="container nav">
+
+      <a href="#home" class="logo">
+        Ankur<span>.</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-btn">Let's Talk</a>
+
+      <button class="menu-btn" id="menuBtn">☰</button>
+
+    </div>
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <div class="eyebrow reveal">
+            <span class="status-dot"></span>
+            Available for opportunities
+          </div>
+
+          <h1 class="reveal delay-1">
+            Hi, I'm<br>
+            <span class="gradient-text">Ankur Singh.</span>
+          </h1>
+
+          <p class="hero-description reveal delay-2">
+            MCA & BCA Computer Science professional passionate about
+            technology, software development, problem solving and building
+            modern digital experiences.
+          </p>
+
+          <div class="hero-buttons reveal delay-3">
+            <a href="#projects" class="btn btn-primary">
+              View My Work →
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+              Get In Touch
+            </a>
+          </div>
+
+        </div>
+
+
+        <div class="profile-wrap reveal delay-2">
+
+          <div class="profile-card">
+
+            <div class="avatar">AS</div>
+
+            <h3>Ankur Singh</h3>
+
+            <p class="profile-role">
+              Computer Science Professional
+            </p>
+
+            <div class="profile-info">
+
+              <div class="info-row">
+                <span>Education</span>
+                <strong>MCA</strong>
+              </div>
+
+              <div class="info-row">
+                <span>Undergraduate</span>
+                <strong>BCA</strong>
+              </div>
+
+              <div class="info-row">
+                <span>Specialization</span>
+                <strong>Computer Science</strong>
+              </div>
+
+              <div class="info-row">
+                <span>Focus</span>
+                <strong>Software & Technology</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-label">01 — About Me</div>
+          <h2>Building with curiosity.</h2>
+          <p>
+            A quick introduction about who I am and what I enjoy working on.
+          </p>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="glass-card">
+            <h3>Who I Am</h3>
+
+            <p>
+              I'm Ankur Singh, a Computer Science professional with an
+              MCA and BCA background. I enjoy learning new technologies,
+              understanding how systems work and turning ideas into
+              practical software solutions.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <h3>What I Do</h3>
+
+            <p>
+              My interests include software development, web technologies,
+              backend systems, databases, DevOps and modern development
+              practices. I'm continuously improving my technical skills
+              through hands-on projects and experimentation.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-label">02 — Education</div>
+          <h2>My academic journey.</h2>
+          <p>
+            My academic background in computer applications and computer science.
+          </p>
+        </div>
+
+        <div class="education">
+
+          <div class="education-card">
+
+            <div class="edu-icon">🎓</div>
+
+            <div>
+              <h3>Master of Computer Applications</h3>
+              <p>Postgraduate Degree • Computer Applications</p>
+            </div>
+
+            <div class="degree">MCA</div>
+
+          </div>
+
+
+          <div class="education-card">
+
+            <div class="edu-icon">💻</div>
+
+            <div>
+              <h3>Bachelor of Computer Applications</h3>
+              <p>Undergraduate Degree • Computer Science</p>
+            </div>
+
+            <div class="degree">BCA</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-label">03 — Skills</div>
+          <h2>Things I work with.</h2>
+          <p>
+            Technologies and areas I'm interested in developing further.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill">
+            <div class="skill-icon">🌐</div>
+            <h4>Web Development</h4>
+            <p>HTML, CSS, JavaScript</p>
+          </div>
+
+          <div class="skill">
+            <div class="skill-icon">⚙️</div>
+            <h4>Backend Development</h4>
+            <p>APIs, Server-side applications</p>
+          </div>
+
+          <div class="skill">
+            <div class="skill-icon">🗄️</div>
+            <h4>Database</h4>
+            <p>SQL & database concepts</p>
+          </div>
+
+          <div class="skill">
+            <div class="skill-icon">🐧</div>
+            <h4>Linux</h4>
+            <p>Ubuntu & command line</p>
+          </div>
+
+          <div class="skill">
+            <div class="skill-icon">🔧</div>
+            <h4>Git</h4>
+            <p>Version control & collaboration</p>
+          </div>
+
+          <div class="skill">
+            <div class="skill-icon">🚀</div>
+            <h4>DevOps</h4>
+            <p>CI/CD & deployment concepts</p>
+          </div>
+
+          <div class="skill">
+            <div class="skill-icon">☁️</div>
+            <h4>Cloud</h4>
+            <p>Cloud infrastructure concepts</p>
+          </div>
+
+          <div class="skill">
+            <div class="skill-icon">🧩</div>
+            <h4>Problem Solving</h4>
+            <p>Logic & programming fundamentals</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-label">04 — Projects</div>
+          <h2>Things I've built.</h2>
+          <p>
+            Add your real projects here as your portfolio grows.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project">
+
+            <div>
+              <div class="project-number">PROJECT 01</div>
+
+              <h3>Web Application</h3>
+
+              <p>
+                A modern responsive web application designed with
+                a clean user experience and scalable structure.
+              </p>
+            </div>
+
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+
+          </article>
+
+
+          <article class="project">
+
+            <div>
+              <div class="project-number">PROJECT 02</div>
+
+              <h3>Backend API</h3>
+
+              <p>
+                REST-style backend application focused on structured
+                APIs, data handling and application logic.
+              </p>
+            </div>
+
+            <div class="tags">
+              <span class="tag">API</span>
+              <span class="tag">Backend</span>
+              <span class="tag">Database</span>
+            </div>
+
+          </article>
+
+
+          <article class="project">
+
+            <div>
+              <div class="project-number">PROJECT 03</div>
+
+              <h3>DevOps Lab</h3>
+
+              <p>
+                Hands-on Linux and DevOps environment exploring
+                automation, deployment and development workflows.
+              </p>
+            </div>
+
+            <div class="tags">
+              <span class="tag">Linux</span>
+              <span class="tag">Git</span>
+              <span class="tag">DevOps</span>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <div class="section-label">05 — Contact</div>
+
+          <h2>Let's build something.</h2>
+
+          <p>
+            Have a project, opportunity or idea? Feel free to connect
+            with me and start a conversation.
+          </p>
+
+          <div class="contact-links">
+
+            <!-- Replace these with your real links -->
+
+            <a
+              href="mailto:your-email@example.com"
+              class="btn btn-primary"
+            >
+              ✉ Email Me
+            </a>
+
+            <a
+              href="https://github.com/"
+              target="_blank"
+              class="btn btn-secondary"
+            >
+              GitHub ↗
+            </a>
+
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              class="btn btn-secondary"
+            >
+              LinkedIn ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <span>© 2026 Ankur Singh. All rights reserved.</span>
+
+      <span>Built with HTML, CSS & JavaScript.</span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+
+      menuBtn.textContent =
+        navLinks.classList.contains("active") ? "✕" : "☰";
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+        menuBtn.textContent = "☰";
+
+      });
+
+    });
+
+
+    // Smooth reveal animation for cards
+    const observer = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+    document
+      .querySelectorAll(".glass-card, .education-card, .skill, .project")
+      .forEach(element => {
+
+        element.style.opacity = "0";
+        element.style.transform = "translateY(25px)";
+        element.style.transition =
+          "opacity .7s ease, transform .7s ease";
+
+        observer.observe(element);
+
+      });
+
+  </script>
+
+</body>
+</html>
+```
+
